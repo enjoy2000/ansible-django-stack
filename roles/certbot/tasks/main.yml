@@ -11,11 +11,6 @@
   service: name=nginx state=stopped
   when: nginx_status.stat.exists
 
-- name: Install certbot and generate cert
-  command: "{{ certbot_script }} certonly --noninteractive --agree-tos --standalone --email {{ certbot_admin_email }} -d {{ inventory_hostname }}"
-  args:
-    creates: "{{ certbot_output_dir }}"
-
 - name: Ensure Nginx is started
   service: name=nginx state=started
   when: nginx_status.stat.exists

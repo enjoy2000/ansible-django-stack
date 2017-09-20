@@ -3,6 +3,9 @@
 - name: Install packages required by the Django app inside virtualenv
   pip: virtualenv={{ virtualenv_path }} requirements={{ requirements_file }}
 
+- name: set permission for manage.py
+  command: "chmod +x {{ project_path }}/manage.py"
+
 - name: Run the Django syncdb command
   django_manage:
     command: syncdb

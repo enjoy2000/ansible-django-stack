@@ -1,0 +1,8 @@
+[all:vars]
+env=development
+
+[webservers]
+test    ansible_user=ubuntu
+
+[dbservers]
+test    ansible_user=ubuntu

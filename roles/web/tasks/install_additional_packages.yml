@@ -13,4 +13,9 @@
     - libcurl4-gnutls-dev
     - gnutls-dev
     - libpq-dev
+    - libcairo2-dev
+    - libcogl-pango-dev
+    - ruby-dev
+    - libxml2-dev
+    - libxslt-dev
     - "{{ virtualenv_python_version + '-dev' }}"
